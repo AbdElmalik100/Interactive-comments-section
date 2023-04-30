@@ -45,7 +45,7 @@
                         </span>
                     </div>
                     <div class="reply" v-else @click="confirmReply(comment, index + 1)">
-                        <img src="../assets/images/icon-reply.svg" alt="">
+                        <img src="../../public/images/icon-reply.svg" alt="">
                         <span class="ms-2 fw-bold">Reply</span>
                     </div>
                 </div>
