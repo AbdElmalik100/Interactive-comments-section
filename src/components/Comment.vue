@@ -60,7 +60,8 @@
                 </form>
             </div>
         </div>
-        <Form v-if="reply && comment.user.username === mention" :mention="mention" @finish-reply="() => reply = false"></Form>
+        <Form v-if="reply && comment.user.username === mention" :mention="mention" @finish-reply="() => reply = false">
+        </Form>
         <div class="replies">
             <Reply :commentReplies="comment.replies"></Reply>
         </div>
@@ -117,12 +118,14 @@ let confirmReply = (comment, index) => {
 .comments {
     .comment {
         background-color: $White;
+
         @media (max-width: 767px) {
             flex-direction: column-reverse;
         }
 
         .vote {
             background-color: $VeryLightGray;
+
             svg {
                 cursor: pointer;
 
@@ -139,6 +142,7 @@ let confirmReply = (comment, index) => {
                 color: $ModerateBlue;
                 user-select: none;
             }
+
             @media (max-width: 767px) {
                 flex-direction: row !important;
                 padding: 10px 20px !important;
@@ -180,6 +184,7 @@ let confirmReply = (comment, index) => {
                     .edit {
                         color: $ModerateBlue;
                     }
+
                     @media (max-width: 767px) {
                         position: absolute;
                         bottom: 35px;
@@ -198,6 +203,7 @@ let confirmReply = (comment, index) => {
                     span {
                         color: $ModerateBlue;
                     }
+
                     @media (max-width: 767px) {
                         position: absolute;
                         bottom: 35px;
@@ -234,10 +240,10 @@ let confirmReply = (comment, index) => {
         margin-left: 50px;
         padding-left: 50px;
         border-left: 2px solid $LightGray;
+
         @media (max-width: 767px) {
             margin-left: 5px;
             padding-left: 5px;
         }
     }
-}
-</style>
+}</style>
