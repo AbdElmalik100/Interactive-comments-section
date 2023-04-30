@@ -53,7 +53,7 @@ const store = createStore({
     },
     actions: {
         fetchCurrentUser({ commit }) {
-            fetch('data.json').then(response => response.json()).then(data => {
+            fetch('/data.json').then(response => response.json()).then(data => {
                 commit('set_user', data.currentUser)
                 commit('set_comments', data.comments)
                 commit('set_pic', data.currentUser.image.png)
