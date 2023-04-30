@@ -246,4 +246,5 @@ let confirmReply = (comment, index) => {
             padding-left: 5px;
         }
     }
-}</style>
+}
+</style>
