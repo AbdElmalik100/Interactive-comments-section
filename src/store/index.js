@@ -38,7 +38,7 @@ const store = createStore({
         delete_reply(state, reply) {
             state.comments.forEach(el => {
                 el.replies = el.replies.filter(el => el.id !== reply.id)
-            }) 
+            })
         },
         update_reply(state, { tempUpdate, editReply }) {
             state.comments.forEach(el => {
@@ -53,7 +53,7 @@ const store = createStore({
     },
     actions: {
         fetchCurrentUser({ commit }) {
-            fetch('/data.json').then(response => response.json()).then(data => {
+            fetch(`data.json`).then(response => response.json()).then(data => {
                 commit('set_user', data.currentUser)
                 commit('set_comments', data.comments)
                 commit('set_pic', data.currentUser.image.png)
@@ -68,8 +68,8 @@ const store = createStore({
         deleteReply({ commit }, reply) {
             commit('delete_reply', reply)
         },
-        applyReplyUpdate({ commit }, {tempUpdate, editReply}) {
-            commit('update_reply', {tempUpdate, editReply})
+        applyReplyUpdate({ commit }, { tempUpdate, editReply }) {
+            commit('update_reply', { tempUpdate, editReply })
         }
     }
 })
